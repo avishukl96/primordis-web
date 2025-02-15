@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Check if the request is for a file or directory, if not, rewrite it
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Remove 'index.php' from the URL
+    RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>

@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+  background-color: #f4f6f9;
+  font-family: "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th,
+.table td {
+  vertical-align: middle !important;
+}
+
+/* Login Page */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+}
+
+.login-box {
+  width: 350px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  margin-bottom: 10px;
+}
+
+/* Dashboard Page */
+.dashboard-container {
+  padding: 40px;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-card {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.stat-card h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.stat-card p {
+  font-size: 18px;
+}
+
+/* Pending Users Page */
+.pending-users-container {
+  padding: 40px;
+}
+
+.action-buttons a {
+  margin-right: 10px;
+}
+
+.action-buttons a.approve {
+  color: #28a745;
+}
+
+.action-buttons a.reject {
+  color: #dc3545;
+}
