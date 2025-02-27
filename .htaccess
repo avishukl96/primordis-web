@@ -1,10 +1,14 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    
-    # Check if the request is for a file or directory, if not, rewrite it
+
+    # Allow direct access to images, CSS, JS, etc.
+    RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|css|js|svg|webp|woff|woff2|ttf|otf|eot|ico|pdf|mp4|mp3)$ [NC]
+    RewriteRule .* - [L]
+
+    # Check if request is for a file or directory
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    
+
     # Remove 'index.php' from the URL
     RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>

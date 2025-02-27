@@ -54,7 +54,7 @@
 <body>
 
     <div class="login-container">
-        <h3>Admin Login</h3>
+        <h3>Primordis Admin Login</h3>
 
         <?php if ($this->session->flashdata('error')): ?>
             <div class="alert alert-danger">
@@ -66,12 +66,12 @@
         <form method="post" action="<?= base_url('cp/admin/login_process'); ?>">
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required value="admin@primordis.tech">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required >
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required value="Admin@primordis.tech">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required >
             </div>
 
             <button type="submit" class="btn btn-primary btn-block" name="login">Login</button>

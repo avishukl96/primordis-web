@@ -70,10 +70,7 @@
                                 <th>Cycling Parameter: Discharge C-Rate (C)</th>
                                 <th>EOL Criterion: (% SOH)</th>
                                 <th>Current State of Health (SOH)</th>
-                               
-
-                                
-                                <th>Action</th>
+                                <th>Reports</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -92,11 +89,9 @@
                                         <td><?= htmlspecialchars($data['current_state_of_health']); ?></td>
                                        
                                         <td > 
-                                            <!-- <a href="<?= base_url('public/' . $data['file_path']); ?>" class="btn btn-info btn-sm mb-2 " download title="download"><i class="fa fa-download"></i></a> -->
-                                            <!-- Uncomment to add delete functionality -->
-                                            <!-- <a href="<?= site_url('fileupload/delete/' . $data['file_id']); ?>" class="btn btn-danger btn-sm" title="Delete Data"><i class="fa fa-trash"></i></a> -->
-
-                                            <a href="<?= site_url('dataprocessor/generate_report_plots/' . $data['process_data_id']); ?>" class="btn btn-info btn-sm" title="Process Data">Generate Report  </a>
+                                            
+                                            <a style="width:100px;" href="<?= site_url('dataprocessor/generate_report_plots/' . $data['process_data_id']); ?>" class="btn btn-warning btn-sm mt-1" title="View Reports"><i class="fa fa-eye"> View</i>  </a>
+                                            <a  style="width:100px;" href="<?= site_url('dataprocessor/generate_report_plots/' . $data['process_data_id']); ?>" class="btn btn-primary btn-sm mt-1" title="Regenerate Reports"> <i class="fa fa-refresh"> Regenerate</i>   </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

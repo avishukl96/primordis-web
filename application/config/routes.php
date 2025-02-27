@@ -68,6 +68,7 @@ $route['dataprocessor/load_model/'] = 'DataProcessorController/load_model/';
 $route['dataprocessor/upload_data/(:num)'] = 'DataProcessorController/upload_data/$1';
 $route['dataprocessor/delete/(:num)'] = 'DataProcessorController/delete/$1';
 $route['dataprocessor/generate_report_plots/(:num)'] = 'DataProcessorController/generate_report_plots/$1';
+$route['dataprocessor/generate_report_plots/(:num)(/:num)?'] = 'DataProcessorController/generate_report_plots/$1/$2';
 
 
 

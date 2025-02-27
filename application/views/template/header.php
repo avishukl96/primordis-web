@@ -49,14 +49,51 @@
 position: sticky;
 top: 0;}
 
-.nav-link{font-color:white;}
+        .nav-link{font-color:white;}
+
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
+
+
+<script>
+    window.onload = function() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    };
+</script>
 
     
 
     
 </head>
 <body>
+
+<div id="loader">
+    <div class="spinner"></div>
+    
+    <p> </p>
+</div>
 
 <!-- Header Section (Navbar) -->
 <nav class="header-nav navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-white">
@@ -113,5 +150,5 @@ top: 0;}
         </div>
     </div>
 </nav>
-<main class="mt-3">
+<main class="mt-3" id="content" style="display: none;">
     
